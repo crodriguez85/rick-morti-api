@@ -3,5 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Cristian Rodriguez",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0"
+  },
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
 }
