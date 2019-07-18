@@ -1,15 +1,15 @@
 import React, { useState, useEffect, Fragment } from "react";
 import axios from 'axios';
-
+import Card from './Card'
 
 function Characters() {
-  const [items, setItems]  = useState([]);
+  const [characters, setCharacters]  = useState([]);
 
   useEffect(() => {
     axios.get('http://localhost:8080/characters')
       .then((res) => {
-        setItems(res.data.results)
-        console.log(setItems)
+        setCharacters(res.data.results)
+        console.log(setCharacters)
       })
       .catch((err) => {
         console.log(err)
@@ -19,14 +19,15 @@ function Characters() {
   return (
     <Fragment>
     <div>
-    {items.map(item => 
-      <h4 key={item.id}>{item.name} - {item.status}</h4>
-      )}
+      <div className="Gallery">
+        {characters.map(character => <Card
+          key={character.id}
+          character={character}
+        />)}
+      </div>
     </div>
-
     </Fragment>
   )
 }
-
 
 export default Characters;
