@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Fragment } from "react";
 import axios from 'axios';
-import Card from './Card'
+import CardBox from './Card'
 
 function Characters() {
   const [characters, setCharacters]  = useState([]);
@@ -19,8 +19,8 @@ function Characters() {
   return (
     <Fragment>
     <div>
-      <div className="Gallery">
-        {characters.map(character => <Card
+      <div>
+        {characters.map(character => <CardBox
           key={character.id}
           character={character}
         />)}

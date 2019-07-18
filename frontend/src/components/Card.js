@@ -1,18 +1,23 @@
 import React from 'react'
+import { Card, Image } from 'semantic-ui-react';
 
-const Card = (props) => {
-  return (
-    <article className="Card">
-      <div className="CardImage">
-        <img src={props.character.image} alt={props.character.name}/>
-      </div>
-      <ul>
-        <h2 className="CardName">{props.character.name}</h2>
-        <li className="CardSpecies">{props.character.species}</li>
-        <li className="CardGender">{props.character.gender}</li>
-        <li className="CardStatus">{props.character.status}</li>
-      </ul>
-    </article>
+  const CardBox = (props) => (
+    <Card.Group itemsPerRow={3}>
+      <Card>
+        <Image src={props.character.image} wrapped ui={false} />
+        <Card.Content>
+          <Card.Header>{props.character.name}</Card.Header>
+          <Card.Description>
+          <li>{props.character.status}</li>
+          <li>{props.character.species}</li>
+          <li>{props.character.gender}</li>
+          <li>{props.character.origin.name}</li>
+          <li>{props.character.location.name}</li>
+          </Card.Description>
+        </Card.Content>
+      </Card>
+    </Card.Group>
   )
-}
-export default Card;
+  
+
+export default CardBox;
