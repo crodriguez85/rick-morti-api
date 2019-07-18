@@ -20,7 +20,7 @@ function Characters() {
     <Fragment>
     <div>
     {items.map(item => 
-      <h4 key={item.id}>{item.name}</h4>
+      <h4 key={item.id}>{item.name} - {item.status}</h4>
       )}
     </div>
 
