@@ -6,7 +6,8 @@ exports.getCharacters = (req, res ) => {
     fetch(url)
     .then((response)=> response.json())
     .then(data => {
-        res.send(data)
+        res.send(data);
+
     })
     .catch(err => console.log(err))
 }
