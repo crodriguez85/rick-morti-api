@@ -1,5 +1,28 @@
 :root {
-    --mainBackground: #f7f7f7
-    --nameColor: #212121
-    ---textColor: #999999
+    --mainBackground: #f7f7f7;
+    --nameColor: #212121;
+    --textColor: #999999;
+    --navBorder: #ef6637
+}
+
+.App {
+    font-family: "Source Sans Pro" ,sans-serif !important
+}
+
+nav {
+    border-bottom: solid var(--navBorder) 
+}
+
+.name {
+    color: var(--nameColor);
+}
+.char-description {
+    color: var(--textColor)
+}
+li.list {
+    list-style: none;
+}
+
+.App {
+    background-color: --mainBackground
 }

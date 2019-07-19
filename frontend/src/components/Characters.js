@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import CardBox from './Card'
+import "../App.css"
 
 function Characters() {
   const [characters, setCharacters]  = useState([]);
@@ -17,11 +18,15 @@ function Characters() {
   }, [])
 
   return (
-    <div>
-      {characters.map(character => <CardBox
-        key={character.id}
-        character={character}
-      />)}
+    <div className="py-5 back-color">
+      <div className="container">
+        <div className="row">
+          {characters.map(character => <CardBox
+            key={character.id}
+            character={character}
+          />)}
+        </div>
+      </div>
     </div>
   )
 }
