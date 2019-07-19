@@ -26,3 +26,11 @@ li.list {
 .App {
     background-color: --mainBackground
 }
+
+.card-footer:last-child {
+    height: 200px;
+}
+
+span {
+    color: #ef6637;
+}

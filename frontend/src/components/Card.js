@@ -12,11 +12,20 @@ export default class Cardbox extends Component {
               <img className="card-img-top" src={image} alt="rick-morti-api"/>
             </div>
             <div className="card-footer justify-content-center pb-5">
-              <h8 className="name">
+              <h4 className="name mb-2">
                 {name}
-              </h8>
-              <p className="char-description">
-                {status} - {species} - {gender}
+              </h4>
+              <p className="char-description mb-0">
+                <b>Status :</b> <span>{status} </span>
+              </p>
+              <p className="char-description mb-0">
+                <b>Specie:</b> <span>{species}</span>
+              </p>
+              <p className="char-description mb-0">
+                <b>Gender:</b> <span>{gender}</span>
+              </p>
+              <p className="char-description mb-0">
+                <b>Location:</b> <span>{this.props.character.location.name}</span>
               </p>
             </div>
           </div>
