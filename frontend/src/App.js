@@ -1,14 +1,19 @@
 import React, { Component } from "react";
 import Characters from './components/Characters'
+import { Header, Divider, Container } from 'semantic-ui-react';
+import Navbar  from './components/NavBar'
 
 export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className={"ui huge header"}>Housing Anywhere Assestment - Rick and Morty API</h1>
-        </header>
-        <Characters/>
+        <Header textAlign="center">
+          <Navbar/>
+        </Header>
+        <Divider/>
+        <Container>
+          <Characters/>
+        </Container>
       </div>
     );
   }

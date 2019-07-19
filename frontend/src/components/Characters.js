@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import CardBox from './Card'
 
@@ -17,16 +17,12 @@ function Characters() {
   }, [])
 
   return (
-    <Fragment>
     <div>
-      <div>
-        {characters.map(character => <CardBox
-          key={character.id}
-          character={character}
-        />)}
-      </div>
+      {characters.map(character => <CardBox
+        key={character.id}
+        character={character}
+      />)}
     </div>
-    </Fragment>
   )
 }
 
